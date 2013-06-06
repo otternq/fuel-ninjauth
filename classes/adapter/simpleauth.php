@@ -29,7 +29,7 @@ class Adapter_SimpleAuth extends Adapter
 			$user_id = Auth::create_user(
 
 				// Username
-				isset($user['username']) ? $user['username'] : null,
+				isset($user['uid']) ? $user['uid'] : null,
 
 				// Password (random string will do if none provided)
 				isset($user['password']) ? $user['password'] : \Str::random(),
@@ -63,6 +63,6 @@ class Adapter_SimpleAuth extends Adapter
 	public function can_auto_login(array $user)
 	{
 		// To automatically register with SimpleAuth you only need one or the other
-		return isset($user['username']) and isset($user['email']) and isset($user['password']);
+		return isset($user['uid']) or isset($user['email']) or isset($user['password']);
 	}
 }

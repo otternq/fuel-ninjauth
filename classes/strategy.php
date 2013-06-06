@@ -191,6 +191,7 @@ abstract class Strategy
 			// They aren't a user and cant be automatically registerd, so redirect to registration page
 			else
 			{
+				die("Can't be automatically generated!");
 				Session::set('ninjauth', array(
 					'user' => $user_hash,
 					'authentication' => array(
