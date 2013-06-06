@@ -22,6 +22,10 @@ class Adapter_SimpleAuth extends Adapter
 		return Auth::instance()->force_login($user_id);
 	}
 
+	public function force_logout() {
+		return Auth::logout();
+	}
+
 	public function create_user(array $user)
 	{
 		try
