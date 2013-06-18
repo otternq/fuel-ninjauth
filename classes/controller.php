@@ -58,6 +58,7 @@ class Controller extends \Controller
 
 				case 'logged_in':
 					$message = 'You have logged in.';
+					Session::set('ninjauth.provider', $provider);
 					$url = static::$login_redirect;
 				break;
 
