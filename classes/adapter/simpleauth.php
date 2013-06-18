@@ -51,6 +51,8 @@ class Adapter_SimpleAuth extends Adapter
 					'full_name' => isset($user['full_name']) ? $user['full_name'] : (
 						isset($user['first_name'], $user['last_name']) ? $user['first_name'].' '.$user['last_name'] : null
 					),
+
+					'image' => $user['image']
 				)
 			);
 			
