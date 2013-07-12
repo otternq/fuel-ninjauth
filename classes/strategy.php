@@ -153,7 +153,7 @@ abstract class Strategy
 			    // credentials ok, go right in
 			    return 'logged_in';
 			}
-
+			print_r($authentication);
 			throw new AuthException('This user could not be logged in.');
 		}
 
